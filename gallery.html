@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图提取 · 图片预览</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <!-- 顶部工具栏 -->
+  <header class="toolbar">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true"></span>
+      <h1>图提取 · 图片预览</h1>
+      <span id="total" class="total"></span>
+    </div>
+
+    <div class="actions">
+      <button id="selectAll" class="btn btn-ghost" type="button">全选</button>
+      <button id="invert" class="btn btn-ghost" type="button">反选</button>
+      <span id="selectedCount" class="selected-count">已选 0 张</span>
+      <button id="download" class="btn btn-primary" type="button" disabled>下载选中</button>
+    </div>
+  </header>
+
+  <!-- 下载进度条 -->
+  <div id="progress" class="progress hidden">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill"></div>
+    </div>
+    <span id="progressText" class="progress-text"></span>
+  </div>
+
+  <!-- 图片网格 -->
+  <main id="grid" class="grid"></main>
+
+  <!-- 空状态 -->
+  <div id="empty" class="empty hidden">
+    <div class="empty-icon" aria-hidden="true"></div>
+    <p>暂无图片</p>
+    <p class="hint">请回到电商商品详情页，点击右下角「获取图片」按钮</p>
+  </div>
+
+  <!-- 轻提示 -->
+  <div id="toast" class="toast"></div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
